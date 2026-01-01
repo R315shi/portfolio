@@ -1,0 +1,116 @@
+/* components/LogoAnimation.css */
+
+/* ========== ANIMATING LOGO ========== */
+.logo-move {
+  position: fixed;
+  width: 120px;
+  height: 120px;
+  z-index: 9999;
+  animation: centerToCorner 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.logo-img {
+  width: 120px;
+  height: 40px;
+  object-fit: contain;
+  display: block;
+}
+
+/* ========== ANIMATION KEYFRAMES ========== */
+@keyframes centerToCorner {
+  0% {
+    /* Start: Center of screen, large */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.8);
+  }
+  
+  40% {
+    /* Stay in center briefly */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.8);
+  }
+  
+  60% {
+    /* Start moving to corner */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  
+  100% {
+    /* End: Top-left corner, normal size - STAYS VISIBLE */
+    top: 20px;
+    left: 20px;
+    transform: scale(1);
+    opacity: 1; /* Stays visible */
+  }
+}
+
+/* ========== WEBSITE CONTENT ========== */
+.website-content.hidden {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+}
+
+.website-content.visible {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ========== RESPONSIVE ========== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .logo-move {
+    width: 100px;
+    height: 100px;
+  }
+  
+  @keyframes centerToCorner {
+    100% {
+      top: 15px;
+      left: 15px;
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .logo-move {
+    width: 80px;
+    height: 80px;
+  }
+  
+  @keyframes centerToCorner {
+    100% {
+      top: 12px;
+      left: 12px;
+    }
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .logo-move {
+    width: 60px;
+    height: 60px;
+  }
+  
+  @keyframes centerToCorner {
+    100% {
+      top: 10px;
+      left: 10px;
+    }
+  }
+}

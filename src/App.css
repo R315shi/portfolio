@@ -1,0 +1,22 @@
+/* ========== MAIN CONTENT SPACING ========== */
+/* Add this to your global CSS or App.css */
+.main-content {
+  margin-top: 70px; /* Same as navbar height */
+  padding: 30px;
+  min-height: calc(100vh - 70px);
+}
+
+/* Adjust for mobile */
+@media (max-width: 768px) {
+  .main-content {
+    margin-top: 60px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    margin-top: 55px;
+    padding: 15px;
+  }
+}

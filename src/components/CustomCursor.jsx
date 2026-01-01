@@ -32,8 +32,8 @@ const CustomCursor = () => {
     let animationFrameId;
     
     const updateCursor = () => {
-      cursorX += (mouseX - cursorX) * 0.1;
-      cursorY += (mouseY - cursorY) * 0.1;
+      cursorX += (mouseX - cursorX) * 0.4;
+      cursorY += (mouseY - cursorY) * 0.4;
       
       cursor.style.left = `${cursorX}px`;
       cursor.style.top = `${cursorY}px`;
