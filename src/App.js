@@ -11,7 +11,6 @@ function App() {
       <LogoAnimation>
         <Navbar/>
         <CursorFollower />
-        <h1>Bahet ma mir</h1>
      
      </LogoAnimation>
     </div>
