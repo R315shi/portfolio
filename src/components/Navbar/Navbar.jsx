@@ -1,6 +1,7 @@
 // components/Navbar.jsx
 import { useState } from 'react';
 import './Navbar.css';
+import Burger from './Burger.jsx';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,18 +16,21 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
+      {/* The actual Burger */}
+      <Burger isOpen={isMenuOpen} closeMenu={closeMenu} />
 
       {/* Navigation Links (on desktop) */}
       <div className="nav-items">
         <a href="#home" className="nav-link" onClick={closeMenu}>
           <span className="link-text">Home</span>
         </a>
+        <a href="#about" className="nav-link" onClick={closeMenu}>
+          <span className="link-text">About</span>
+        </a>        
         <a href="#projects" className="nav-link" onClick={closeMenu}>
           <span className="link-text">Projects</span>
         </a>
-        <a href="#about" className="nav-link" onClick={closeMenu}>
-          <span className="link-text">About</span>
-        </a>
+
         <a href="#contact" className="nav-link" onClick={closeMenu}>
           <span className="link-text">Contact</span>
         </a>
@@ -42,23 +46,8 @@ const Navbar = () => {
         <div className="burger-line"></div>
         <div className="burger-line"></div>
       </button>
-
-      {/* Mobile Navigation Links (overlay) */}
-      <div className={`mobile-nav-items ${isMenuOpen ? 'open' : ''}`}>
-        <a href="#home" className="mobile-nav-link" onClick={closeMenu}>
-          <span className="mobile-link-text">Home</span>
-        </a>
-        <a href="#projects" className="mobile-nav-link" onClick={closeMenu}>
-          <span className="mobile-link-text">Projects</span>
-        </a>
-        <a href="#about" className="mobile-nav-link" onClick={closeMenu}>
-          <span className="mobile-link-text">About</span>
-        </a>
-        <a href="#contact" className="mobile-nav-link" onClick={closeMenu}>
-          <span className="mobile-link-text">Contact</span>
-        </a>
-      </div>
     </nav>
+    
   );
 };
 

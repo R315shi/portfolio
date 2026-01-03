@@ -16,6 +16,21 @@ const LogoAnimation = ({ children }) => {
     return () => clearTimeout(timer);
   }, []);
 
+  // Initialize AOS when animation completes
+  useEffect(() => {
+    if (isComplete && typeof window !== 'undefined') {
+      // Import AOS dynamically to avoid SSR issues
+      import('aos').then((AOS) => {
+        AOS.init({
+          duration: 800,
+          once: true,
+          offset: 100,
+        });
+        AOS.refresh(); // Refresh to detect newly visible elements
+      });
+    }
+  }, [isComplete]);
+
   return (
     <>
       {/* Animated Logo - STAYS VISIBLE in corner */}

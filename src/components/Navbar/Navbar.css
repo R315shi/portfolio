@@ -1,4 +1,4 @@
-/* components/Navbar.css */
+/* components//Navbar/Navbar.css */
 
 /* ========== NAVBAR BASE ========== */
 .navbar {
@@ -25,7 +25,7 @@
   display: flex;
   gap: 30px;
   margin-left: auto; /* Push links to the right */
-  padding-right: 60px;
+  padding-right: 4vw;
   opacity: 0;
   transform: translateY(-10px);
   animation: navItemsFadeIn 0.6s ease 1s forwards; /* Last to appear */
@@ -68,45 +68,99 @@
 
 /* ========== BURGER MENU BUTTON ========== */
 .burger-menu {
-  display: none; /* Hidden by default on desktop */
-  flex-direction: column;
-  justify-content: space-between;
+  display: none;
   width: 30px;
   height: 24px;
   background: transparent;
-  border: none;
   cursor: pointer;
   padding: 0;
   z-index: 101;
-  transition: transform 0.3s ease;
-  margin-left: auto; /* Push burger to the right */
-}
-
-.burger-menu:hover {
-  transform: scale(1.1);
+  margin-left: auto;
+  position: absolute; /* Change from relative to absolute */
+  right: clamp(45px, 3vw, 768px); /* Responsive right positioning */
 }
 
 .burger-line {
+  position: absolute;
+  left: 0;
   width: 100%;
   height: 3px;
   background-color: #333;
-  border-radius: 10px;
+  border-radius: 3px;
   transition: all 0.3s ease;
-  transform-origin: left center;
+  transform-origin: center;
 }
 
-/* Burger animation to X */
+/* Initial positions */
+.burger-line:nth-child(1) {
+  top: 0;
+}
+
+.burger-line:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.burger-line:nth-child(3) {
+  bottom: 0;
+}
+
+/* FIXED X Animation - No translation, just rotation */
 .burger-menu.open .burger-line:nth-child(1) {
-  transform: rotate(45deg) translate(5px, -1px);
+  transform: rotate(45deg);
+  top: 50%;
+  margin-top: -1.5px; /* Half of line height to center it */
 }
 
 .burger-menu.open .burger-line:nth-child(2) {
   opacity: 0;
-  transform: translateX(-20px);
+  transform: scaleX(0);
 }
 
 .burger-menu.open .burger-line:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, 3px);
+  transform: rotate(-45deg);
+  top: 50%;
+  bottom: auto;
+  margin-top: -1.5px; /* Half of line height to center it */
+}
+
+/* Alternative: Even simpler - just rotate at their current positions */
+/*
+.burger-menu.open .burger-line:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.burger-menu.open .burger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.open .burger-line:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+*/
+
+/* Show on mobile */
+@media (max-width: 768px) {
+  .burger-menu {
+    display: block;
+  }
+}
+
+/* Small mobile adjustments */
+@media (max-width: 480px) {
+  .burger-menu {
+    width: 28px;
+    height: 22px;
+  }
+  
+  .burger-line {
+    height: 2.5px;
+  }
+  
+  .burger-menu.open .burger-line:nth-child(1),
+  .burger-menu.open .burger-line:nth-child(3) {
+    margin-top: -1.25px; /* Half of 2.5px */
+  }
 }
 
 /* ========== MOBILE NAVIGATION ITEMS ========== */
@@ -204,9 +258,7 @@
     background: rgba(255, 255, 255, 0.15); /* translucent background */
     backdrop-filter: blur(10px); /* glass blur effect */
     -webkit-backdrop-filter: blur(10px); /* Safari support */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3); /* optional: subtle border */
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -225,6 +277,11 @@
     padding-top: 30px;
     opacity: 1;
     transform: translateY(0);
+    background: rgba(255, 255, 255, 0.15); /* translucent background */
+    backdrop-filter: blur(10px); /* glass blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* optional: subtle border */
+
   }
   
   .mobile-nav-link {
