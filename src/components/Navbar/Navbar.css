@@ -16,7 +16,7 @@
   padding: 0 40px;
   z-index: 100;
   opacity: 0; /* Start hidden */
-  animation: navbarFadeIn 0.8s ease 0.5s forwards; /* Delayed fade in */
+  animation: navbarFadeIn 0.8s ease forwards; /* Delayed fade in */
 }
 
 
@@ -68,6 +68,7 @@
 
 /* ========== BURGER MENU BUTTON ========== */
 .burger-menu {
+  border: none;
   display: none;
   width: 30px;
   height: 24px;
@@ -258,7 +259,6 @@
     background: rgba(255, 255, 255, 0.15); /* translucent background */
     backdrop-filter: blur(10px); /* glass blur effect */
     -webkit-backdrop-filter: blur(10px); /* Safari support */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* optional: subtle border */
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -280,8 +280,6 @@
     background: rgba(255, 255, 255, 0.15); /* translucent background */
     backdrop-filter: blur(10px); /* glass blur effect */
     -webkit-backdrop-filter: blur(10px); /* Safari support */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* optional: subtle border */
-
   }
   
   .mobile-nav-link {

@@ -9,22 +9,40 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 function App() {
+  const [showContent, setShowContent] = useState(false);
+
   useEffect(() => {
-  AOS.init({
-    duration: 1000, // animation duration in ms
-    once: true,     // whether animation should happen only once
-  });
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100,
+    });
   }, []);
+
+  const handleIntroFinish = () => {
+    setShowContent(true);
+
+    requestAnimationFrame(() => {
+      AOS.refreshHard();
+    });
+  };
+
   return (
     <div>
-      <Background/>
-      <LogoAnimation>
-        <Navbar/>
-        <CursorFollower />
-        <MainComponents/>
-     </LogoAnimation>
+      <Background />
+
+      <LogoAnimation onFinish={handleIntroFinish} />
+
+      {showContent && (
+        <>
+          <Navbar />
+          <CursorFollower />
+          <MainComponents />
+        </>
+      )}
     </div>
   );
 }
+
 
 export default App;

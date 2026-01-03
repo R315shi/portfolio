@@ -6,15 +6,15 @@ const MainComponents = () => {
   return (
     <div className='maindiv'>
         <div className='firstdiv'
-        data-aos="fade-up">
+        data-aos="zoom-in">
           Test
         </div>
         <div className='firstdiv'
-        data-aos="fade-up">
+        data-aos="zoom-in">
           Test
         </div>
         <div className='firstdiv'
-        data-aos="fade-up">
+        data-aos="zoom-in">
           Test
         </div>     
     </div>

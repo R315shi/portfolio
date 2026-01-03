@@ -25,7 +25,7 @@ const Navbar = () => {
           <span className="link-text">Home</span>
         </a>
         <a href="#about" className="nav-link" onClick={closeMenu}>
-          <span className="link-text">About</span>
+          <span className="link-text">About Me</span>
         </a>        
         <a href="#projects" className="nav-link" onClick={closeMenu}>
           <span className="link-text">Projects</span>
