@@ -1,20 +1,69 @@
 .maindiv{
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
     align-items: center;
 }
 .firstdiv{
-    background: rgba(255, 255, 255, 0.15); /* translucent background */
-    backdrop-filter: blur(10px); /* glass blur effect */
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
-    margin-top: clamp(120px, 12vw, 240px);
+    margin: 12vw;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    height:20vw;
-    width:60vw;
+    padding:3vw;
+    width:50vw;
+ }
+ .text1{
+    text-decoration: none;
+    max-width: 500px;
+    color: #333;
+    position: relative;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+    font-size: 1.5vw;
+ }
+.link1 {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+}
+
+.link1:hover {
+  color: #0070f3;
+}
+
+/* Underline animation on hover */
+.link1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #0070f3;
+  transition: width 0.3s ease;
+}
+
+.link1:hover::after {
+  width: 100%;
+}
+.wrap{
+   height:fit-content;
+   width: fit-content;
+}
+
+
+.seconddiv{
+    margin: 0vw 12vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding:3vw;
+    width:65vw;
+    align-items: flex-end;
  }
