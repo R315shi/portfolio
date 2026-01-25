@@ -5,11 +5,11 @@ function Projects() {
     {
       id: 1,
       title: 'Reis Cakaj (This Website)',
-      description: 'Personal Portfolio',
-      technologies: ['React'],
+      description: 'Personal Portfolio. made with ReactJS, responsive design and animations.',
+      technologies: ['React','JSX','CSS','HTML'],
       icon: './images/Website1.png',
       color: '#e8f5e9',
-      githubLink: 'https://github.com',
+      githubLink: 'https://github.com/ReisCakaj/portfolio',
       liveLink: 'https://demo.example.com'
     },
     {
@@ -17,7 +17,7 @@ function Projects() {
       title: 'Task Management App',
       description: 'A collaborative project management tool with real-time updates, team assignments, and progress tracking.',
       technologies: ['Vue.js', 'Firebase', 'WebSockets', 'Vuex'],
-      icon: 'fas fa-tasks',
+      icon: '/images/Website1.png',
       color: '#f3e5f5',
       githubLink: 'https://github.com',
       liveLink: 'https://demo.example.com'

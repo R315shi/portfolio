@@ -65,3 +65,7 @@
 .link1:hover::after {
   width: 100%;
 }
+.wrap{
+  height:fit-content;
+  width: fit-content;
+}

@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState} from 'react';
 import './App.css';
 import Background from './components/background.jsx';
 import CursorFollower from './components/CustomCursor.jsx';
