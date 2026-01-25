@@ -28,14 +28,14 @@ const Navbar = () => {
           <span className="link-text">About Me</span>
         </a>
         <a href="#tech-stack" className="nav-link" onClick={closeMenu}>
-          <span className="link-text">Tech Stack</span>
+          <span className="link-text">Technical Skills</span>
         </a>        
         <a href="#projects" className="nav-link" onClick={closeMenu}>
           <span className="link-text">Projects</span>
         </a>
 
         <a href="#contact" className="nav-link" onClick={closeMenu}>
-          <span className="link-text">Contact</span>
+          <span className="link-text">Get in touch</span>
         </a>
       </div>
 

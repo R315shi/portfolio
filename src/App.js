@@ -5,6 +5,9 @@ import CursorFollower from './components/CustomCursor.jsx';
 import LogoAnimation from './components/LogoAnimation.jsx';
 import Navbar from './components/Navbar/Navbar.jsx';
 import MainComponents from './components/MainComponents.jsx';
+import TechnicallSkills from './components/TechnicalSkills.jsx';
+import Projects from './components/Projects.jsx';
+import Contact from './components/Contact.jsx';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -38,6 +41,9 @@ function App() {
           <Navbar />
           <CursorFollower />
           <MainComponents />
+          <TechnicallSkills />
+          <Projects />
+          <Contact />
         </>
       )}
     </div>
