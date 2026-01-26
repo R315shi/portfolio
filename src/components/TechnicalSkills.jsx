@@ -29,7 +29,7 @@ function TechnicalSkills() {
     <section id="skills" className="skills">
       <div className="container">
         <h2>Technical Skills</h2>
-        <p className="skills-intro">I work with a wide range of technologies across the frontend & backend</p>
+        {/* <p className="skills-intro">I work with a wide range of technologies across the frontend & backend</p> */}
         
         <div className="skills-container">
           {skills.map(skill => (

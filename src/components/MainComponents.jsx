@@ -7,7 +7,7 @@ const MainComponents = () => {
     <div className='main-div'>
         <div className='intro'
         data-aos="zoom-in">
-          <div className='intro-text intro-text--first'>
+          <div className='intro-text intro-text--first' id='home'>
             <h1>Reis Cakaj</h1><br/>
             <h3>Frontend / Full-Stack* Student Developer.<br/>Building modern web applications with React</h3>
             <div className='wrap'>
@@ -15,7 +15,7 @@ const MainComponents = () => {
             </div>
           </div>
          
-           <div className='intro-text intro-text--second'>
+           <div className='intro-text intro-text--second' id='about'>
             <h1>About Me</h1><br/>
             <h3>Im a college student that enjoys building websites.<br/>
             I mainly work with react on the frontend and im currently learning full-stack.</h3>

@@ -27,7 +27,7 @@ const Navbar = () => {
         <a href="#about" className="nav-link" onClick={closeMenu}>
           <span className="link-text">About Me</span>
         </a>
-        <a href="#tech-stack" className="nav-link" onClick={closeMenu}>
+        <a href="#skills" className="nav-link" onClick={closeMenu}>
           <span className="link-text">Technical Skills</span>
         </a>        
         <a href="#projects" className="nav-link" onClick={closeMenu}>

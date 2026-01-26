@@ -1,4 +1,4 @@
-import { useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import Background from './components/background.jsx';
 import CursorFollower from './components/CustomCursor.jsx';
@@ -8,6 +8,7 @@ import MainComponents from './components/MainComponents.jsx';
 import TechnicallSkills from './components/TechnicalSkills.jsx';
 import Projects from './components/Projects.jsx';
 import Contact from './components/Contact.jsx';
+import Footer from './components/Footer.js';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -44,6 +45,7 @@ function App() {
           <TechnicallSkills />
           <Projects />
           <Contact />
+          <Footer />
         </>
       )}
     </div>

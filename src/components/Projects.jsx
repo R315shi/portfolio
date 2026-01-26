@@ -7,54 +7,51 @@ function Projects() {
       title: 'Reis Cakaj (This Website)',
       description: 'Personal Portfolio. made with ReactJS, responsive design and animations.',
       technologies: ['React','JSX','CSS','HTML'],
-      icon: './images/Website1.png',
-      color: '#e8f5e9',
+      icon: '/images/Website1.png',
       githubLink: 'https://github.com/ReisCakaj/portfolio',
       liveLink: 'https://demo.example.com'
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'A collaborative project management tool with real-time updates, team assignments, and progress tracking.',
-      technologies: ['Vue.js', 'Firebase', 'WebSockets', 'Vuex'],
-      icon: '/images/Website1.png',
-      color: '#f3e5f5',
-      githubLink: 'https://github.com',
-      liveLink: 'https://demo.example.com'
+      title: 'Grand Kosova',
+      description: 'A modern website built for a wedding restaurant to highlight events, services, and the venue.',
+      technologies: ['React','JSX','CSS','HTML'],
+      icon: '/images/Website2.png',
+      githubLink: 'https://github.com/ReisCakaj/grand-kosova',
+      liveLink: 'https://grand-kosova.com'
     },
-    {
-      id: 3,
-      title: 'Data Visualization Dashboard',
-      description: 'Interactive dashboard for analyzing business metrics with customizable charts and data filtering.',
-      technologies: ['Python', 'D3.js', 'Flask', 'PostgreSQL', 'Chart.js'],
-      icon: 'fas fa-chart-line',
-      color: '#e3f2fd',
-      githubLink: 'https://github.com',
-      liveLink: 'https://demo.example.com'
-    },
-    {
-      id: 4,
-      title: 'Social Media API',
-      description: 'RESTful API for a social media platform with user authentication, posts, comments, and likes.',
-      technologies: ['Express.js', 'JWT', 'MongoDB', 'Redis', 'Socket.io'],
-      icon: 'fas fa-users',
-      color: '#fff3e0',
-      githubLink: 'https://github.com',
-      liveLink: 'https://demo.example.com'
-    }
+    // {
+    //   id: 3,
+    //   title: 'Data Visualization Dashboard',
+    //   description: 'Interactive dashboard for analyzing business metrics with customizable charts and data filtering.',
+    //   technologies: ['Python', 'D3.js', 'Flask', 'PostgreSQL', 'Chart.js'],
+    //   icon: 'fas fa-chart-line',
+    //   githubLink: 'https://github.com',
+    //   liveLink: 'https://demo.example.com'
+    // },
+    // {
+    //   id: 4,
+    //   title: 'Social Media API',
+    //   description: 'RESTful API for a social media platform with user authentication, posts, comments, and likes.',
+    //   technologies: ['Express.js', 'JWT', 'MongoDB', 'Redis', 'Socket.io'],
+    //   icon: 'fas fa-users',
+    //   color: '#fff3e0',
+    //   githubLink: 'https://github.com',
+    //   liveLink: 'https://demo.example.com'
+    // }
   ];
 
   return (
     <section id="projects" className="projects">
       <div className="container">
         <h2>My Projects</h2>
-        <p className="projects-intro">A selection of my recent work showcasing different technologies and solutions</p>
+        {/* <p className="projects-intro">A selection of my recent work showcasing different technologies and solutions</p> */}
         
         <div className="projects-grid">
           {projects.map(project => (
             <div className="project-card" key={project.id}>
               <div className="project-img" style={{backgroundColor: project.color}}>
-                <i className={project.icon}></i>
+                <img src={project.icon} alt="image" className='project-img' />
               </div>
               <div className="project-info">
                 <h3>{project.title}</h3>

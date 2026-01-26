@@ -1,0 +1,21 @@
+footer{
+    background: rgba(255, 255, 255, 0.15); /* translucent background */
+    font-family:'Rethink Sans', sans-serif ;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding:0px;
+    gap:0px;
+}
+.footer-logo {
+    width:12vw;
+    min-width: 120px;
+}
+.footer-description {
+    text-align: center;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    padding: 0px;
+    max-height: 8vw;
+}
